@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "argabioso-index",
+    "site": "argabioso-domains",
     "public": "public",
     "ignore": [
       "firebase.json",
