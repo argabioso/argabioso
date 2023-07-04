@@ -13,6 +13,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500;700&display=swap">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
   <link rel="stylesheet" href="../shared/css/fonts.css" />
   <link rel="stylesheet" href="css/bulma.css" />
@@ -30,7 +31,7 @@
 
         <div class="navbar-item">
           <div class="buttons">
-            <a class="button is-black is-small is-rounded" id="rsvp">RSVP</a>
+            <button class="button is-black is-small is-rounded" id="rsvp" data-target="modal-rsvp-form">RSVP</button>
           </div>
         </div>
       </div>
@@ -43,7 +44,7 @@
     <div class="hero-body">
       <div class="animation engagement-ring">
         <div class="title-container">
-          <img src="images/title.webp" id="title">
+          <img src="images/title.webp" class="mitchie-arbyn-title">
           <br />
           <span class="subtitle">&nbsp;The Wedding</span>
         </div>
@@ -94,11 +95,43 @@
     <div class="hero-foot"></div>
   </section>
 
+  <div id="modal-rsvp-form" class="modal is-active">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <div class="box">
+        <div class="field">
+          <div class="control">
+            <label for="guest-name" class="label">Find your wedding invitation</label>
+            <input class="input " type="text" placeholder="Name of guest" name="guest-name" id="guest-name" value="toni argabioso">
+          </div>
+        </div>
+
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button submit-button is-black ">Find</button>
+          </div>
+          <div class="control">
+            <button class="button cancel-button is-light ">Cancel</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+
   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script> -->
 
+  <script src="../shared/js/extend.js"></script>
+
+  <script src="js/plugins.js"></script>
   <script src="js/main.js"></script>
 </body>
 

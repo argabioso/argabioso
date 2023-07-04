@@ -1,3 +1,7 @@
+html, body, button, input, optgroup, select, textarea {
+  font-family: 'Inter var', sans-serif;
+}
+
 /*
  * Navigation bar.
  */
@@ -17,6 +21,31 @@
 
 .navbar .navbar-background {
   transition: background 0.25s ease-in-out;
+}
+
+.modal-background {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background: rgba(10, 10, 10, 0.75);
+}
+
+.title.is-1,
+.title.is-2,
+.title.is-3,
+.title.is-4 {
+  font-family: 'Google Sans', sans-serif;
+  letter-spacing: -0.05rem;
+}
+
+.box {
+  border-radius: 18px;
+  position: relative;
+  margin: 1.25rem;
+}
+
+.box > .title {
+  font-family: "Partsold";
+  margin-bottom: 1rem;
 }
 
 .navbar.is-transparent .navbar-background {
@@ -99,7 +128,7 @@ ol.animation__images {
   text-align: center;
 }
 
-#title {
+.mitchie-arbyn-title {
   width: 100%;
 }
 
