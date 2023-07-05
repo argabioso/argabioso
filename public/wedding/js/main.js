@@ -90,7 +90,7 @@ window.addEventListener('load', function() {
   (document.querySelectorAll('.submit-button') || []).forEach(($submit) => {
     $submit.addEventListener('click', () => {
       const $name = document.getElementById('guest-name');
-      checkName($name.value);
+      console.log(checkName($name.value));
     });
   });
 

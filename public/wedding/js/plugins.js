@@ -100,6 +100,33 @@ const options = {
   ]
 };
 
+function getIdWithLowestScore(data) {
+    const idToScores = {};
+    for (let obj of data) {
+        if (!idToScores[obj.id]) {
+            idToScores[obj.id] = [];
+        }
+        idToScores[obj.id].push(obj.score);
+    }
+
+    let maxCount = Math.max(...Object.values(idToScores).map(arr => arr.length));
+
+    const maxCountIds = Object.keys(idToScores).filter(id => idToScores[id].length === maxCount);
+
+    let minScoreId = null;
+    let minScoreAvg = Infinity;
+
+    for (let id of maxCountIds) {
+        let scoreAvg = idToScores[id].reduce((a, b) => a + b, 0) / idToScores[id].length;
+        if (scoreAvg < minScoreAvg) {
+            minScoreAvg = scoreAvg;
+            minScoreId = id;
+        }
+    }
+
+    return minScoreId;
+}
+
 function checkName(name) {
     const fuse = new Fuse(people, options);
 
@@ -130,16 +157,17 @@ function checkName(name) {
             }
         }
 
-        for ()
-
         if (tableResults.length > 0) {
             console.table(tableResults);
+            alert('Name found: ' + invitees[getIdWithLowestScore(tableResults)]["fullName"]); // Outputs: 11
         }
     }
 
     function trim(str) {
         return str.replace(/^\s\s*/, '').replace(/\s\s*$/, '');
     }
+
+    return null
 }
 
 function _soundex(name) {
