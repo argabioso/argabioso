@@ -71,7 +71,9 @@ var invitees = [
 var people = []
 for (let id in invitees) {
     let invitee = invitees[id]
-    invitees[id]["fullName"] = `${invitee["lastName"]}, ${invitee["firstNames"][0]} ${invitee["middleName"]}`;
+    fullName = `${invitee["lastName"]}, ${invitee["firstNames"][0]} ${invitee["middleName"]}`;
+    invitees[id]["fullName"] = fullName;
+    invitees[id]["encoded"] = secretEncoder(fullName);
 
     for (let i in invitee["firstNames"]) {
         let firstName = invitee["firstNames"][i];
@@ -94,7 +96,7 @@ const options = {
   includeScore: true,
   findAllMatches: true,
   minMatchCharLength: 6,  // 3 letters first name + space + 3 letters last name
-  threshold: 0.2,
+  threshold: 0.16,
   keys: [
     "name",
   ]
@@ -145,9 +147,9 @@ function checkName(name) {
             let score = results[key]["score"];
             let name = results[key]["item"]["name"];
             let fullName = invitees[id]["fullName"];
+            let encoded = invitees[id]["encoded"];
 
             if (score <= options.threshold && !name.includes(` ${pattern}`)) {
-                let encoded = secretEncoder(fullName);
                 tableResults.push({
                     "id": results[key]["item"]["id"],
                     "name": results[key]["item"]["name"],
@@ -159,7 +161,14 @@ function checkName(name) {
 
         if (tableResults.length > 0) {
             console.table(tableResults);
-            alert('Name found: ' + invitees[getIdWithLowestScore(tableResults)]["fullName"]); // Outputs: 11
+            match = invitees[getIdWithLowestScore(tableResults)]; // Outputs: 11
+            console.log(match["encoded"])
+            console.log(secret)
+            if (match["encoded"] != secret) {
+                alert("Please use the QR code given to you by the couple");
+            } else {
+                alert("Name match: " + match["fullName"]);
+            }
         }
     }
 
