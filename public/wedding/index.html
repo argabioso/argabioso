@@ -31,10 +31,13 @@
         client_id: "148701333560-9pulfmcem72a78jod351ml512d0furpq.apps.googleusercontent.com",
         callback: handleCredentialResponse
       });
+      google.accounts.id.renderButton(
+        document.getElementById("rsvp"),
+        { theme: "outline", size: "medium" }  // customization attributes
+      );
       google.accounts.id.prompt(); // also display the One Tap dialog
     }
   </script>
-
   <nav class="navbar is-transparent is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="navbar-background"></div>
     <div class="container is-max-desktop">
