@@ -57,6 +57,7 @@ section {
 
 .hero {
   background-image: url("../images/bg--bosco-sketch.v2.webp");
+  background-position: center;
   background-size: cover;
 }
 
