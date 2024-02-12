@@ -11,7 +11,6 @@ html {
 }
 
 html {
-  overflow-y: scroll;
   font-size: 16px;
   width: 100%;
 }
@@ -56,9 +55,23 @@ section {
 }
 
 .hero {
-  background-image: url("../images/bg--bosco-sketch.v2.webp");
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.hero .background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/bg--bosco-sketch.min.webp");
+  background-attachment: fixed;
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
+  z-index: 10;
 }
 
 .hero img {
@@ -69,6 +82,9 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100px;
+  z-index: 11;
+  margin-left: -50px;
+  margin-top: -39.5px;
 }
 
 @media screen and (min-width: 1024px), print {

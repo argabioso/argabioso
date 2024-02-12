@@ -13,19 +13,26 @@
 
   <link rel="stylesheet" href="https://arbyn.argabioso.com/shared/css/fonts.css">
   <link rel="stylesheet" href="css/main.v2.css" />
+  <link rel="stylesheet" href="css/rolly.css" />
 </head>
 
 <body>
-  <section class="slanted hero">
-    <img src="images/logo--colored.svg">
-  </section>
+  <div class="app">
+    <section data-scene class="slanted hero">
+      <img data-scene="hero" data-speed="1.2" src="images/logo--colored.svg">
+      <div data-scene="hero" data-speed="0.4" class="background-image"></div>
+    </section>
 
-  <section class="our-story">
-    <div class="container">
-      <h1>The Quick Brown Fox</h1>
-      <p>jumps over the lazy dog</p>
-    </div>
-  </section>
+    <section data-scene class="our-story">
+      <div class="container">
+        <h1>The Quick Brown Fox</h1>
+        <p>jumps over the lazy dog</p>
+      </div>
+    </section>
+  </div>
+
+  <script src="js/plugins.v2.js"></script>
+  <script src="js/main.v2.js"></script>
 </body>
 
 </html>
