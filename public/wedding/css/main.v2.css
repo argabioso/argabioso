@@ -1,0 +1,93 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  overflow-y: scroll;
+  font-size: 16px;
+  width: 100%;
+}
+
+html, body {
+  background-color: #202125;
+  color: #e3d8ca;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-family: "Google Sans", sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+h4, h5, h6, p {
+  color: #aa9f92;
+  font-family: "Google Sans Text", sans-serif;
+}
+
+section {
+  position: relative;
+  margin: 0 auto;
+  padding: 40px 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 28px;
+  padding-right: 28px;
+  z-index: 3;
+}
+
+.hero {
+  background-image: url("../images/bg--bosco-sketch.v2.webp");
+  background-size: cover;
+}
+
+.hero img {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+}
+
+@media screen and (min-width: 1024px), print {
+  section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .container {
+    width: 800px;
+  }
+}
+
+@media screen and (min-width: 1366px), print {
+  section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .container {
+    width: 1024px;
+  }
+}
