@@ -1,6 +1,6 @@
-const r = rolly({
-  view: document.querySelector('.app'),
-  native: true,
-  // other options
+(function () {
+  const scroll = new LocomotiveScroll({
+      el: document.querySelector('[data-scroll-container]'),
+      smooth: true
   });
-r.init();
+})();

@@ -13,20 +13,31 @@
 
   <link rel="stylesheet" href="https://arbyn.argabioso.com/shared/css/fonts.css">
   <link rel="stylesheet" href="css/main.v2.css" />
-  <link rel="stylesheet" href="css/rolly.css" />
 </head>
 
 <body>
-  <div class="app">
-    <section data-scene class="slanted hero">
-      <img data-scene="hero" data-speed="1.2" src="images/logo--colored.svg">
-      <div data-scene="hero" data-speed="0.4" class="background-image"></div>
+  <div data-scroll-container class="app">
+    <section data-scroll-section data-scroll-section-id="hero" class="hero">
+      <img data-scroll data-scroll-speed="6" class="logo" src="images/logo--colored.svg">
+      <div data-scroll data-scroll-speed="1" class="background-image"></div>
     </section>
 
-    <section data-scene class="our-story">
-      <div class="container">
-        <h1>The Quick Brown Fox</h1>
-        <p>jumps over the lazy dog</p>
+    <section data-scroll-section data-scroll-section-id="our-story" class="our-story">
+      <div class="container animated">
+        <div data-scroll data-scroll-speed="10" data-scroll-direction="horizontal" class="row">
+          <figure class="story-1"></figure>
+          <figure class="story-2"></figure>
+          <figure class="story-3"></figure>
+          <figure class="story-4"></figure>
+          <figure class="story-5"></figure>
+          <figure class="story-6"></figure>
+          <figure class="story-7"></figure>
+          <figure class="story-8"></figure>
+        </div>
+
+        <div data-scroll data-scroll-speed="-10" data-scroll-direction="horizontal" class="row">
+          <figure style="background-color: #ff0000;">test</figure>
+        </div>
       </div>
     </section>
   </div>

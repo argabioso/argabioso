@@ -1,3 +1,5 @@
+/*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */html.has-scroll-smooth{overflow:hidden}html.has-scroll-dragging{-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.has-scroll-smooth body{overflow:hidden}.has-scroll-smooth [data-scroll-container]{min-height:100vh}[data-scroll-direction=horizontal] [data-scroll-container]{display:inline-block;height:100vh;white-space:nowrap}[data-scroll-direction=horizontal] [data-scroll-section]{display:inline-block;height:100%;vertical-align:top;white-space:nowrap}.c-scrollbar{height:100%;opacity:0;position:absolute;right:0;top:0;transform-origin:center right;transition:transform .3s,opacity .3s;width:11px}.c-scrollbar:hover{transform:scaleX(1.45)}.c-scrollbar:hover,.has-scroll-dragging .c-scrollbar,.has-scroll-scrolling .c-scrollbar{opacity:1}[data-scroll-direction=horizontal] .c-scrollbar{bottom:0;height:10px;top:auto;transform:scaleY(1);width:100%}[data-scroll-direction=horizontal] .c-scrollbar:hover{transform:scaleY(1.3)}.c-scrollbar_thumb{background-color:#000;border-radius:10px;cursor:-webkit-grab;cursor:grab;margin:2px;opacity:.5;position:absolute;right:0;top:0;width:7px}.has-scroll-dragging .c-scrollbar_thumb{cursor:-webkit-grabbing;cursor:grabbing}[data-scroll-direction=horizontal] .c-scrollbar_thumb{bottom:0;right:auto}
+
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -8,6 +10,16 @@ html {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
+}
+
+/* Only necessary with horizontal scrolling */
+html[data-scroll-orientation="horizontal"] {
+    body {
+        width: fit-content;
+    }
+    [data-scroll-container] {
+        display: flex;
+    }
 }
 
 html {
@@ -44,6 +56,10 @@ section {
   height: 100vh;
 }
 
+.app {
+  position: relative;
+}
+
 .container {
   width: 100%;
   height: 100%;
@@ -52,6 +68,10 @@ section {
   padding-left: 28px;
   padding-right: 28px;
   z-index: 3;
+}
+
+.container > .container {
+  height: auto;
 }
 
 .hero {
@@ -65,7 +85,7 @@ section {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 110%;
   background-image: url("../images/bg--bosco-sketch.min.webp");
   background-attachment: fixed;
   background-position: center;
@@ -74,18 +94,73 @@ section {
   z-index: 10;
 }
 
-.hero img {
+.hero .logo {
   margin: 0;
   padding: 0;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   width: 100px;
-  z-index: 11;
+  z-index: 12;
   margin-left: -50px;
   margin-top: -39.5px;
 }
+
+.our-story {
+  width: 200vw;
+}
+
+.our-story:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(180deg,#1a160d,#1a160d 49%,rgba(43,29,11,0));
+  z-index: 16;
+}
+
+.our-story:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(27,23,14,.88);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 15;
+}
+
+.our-story .row {
+  position: relative;
+  height: 240px;
+  margin-bottom: 20px;
+}
+
+.our-story .row > figure {
+  display: inline-block;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 240px;
+  width: 320px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+figure.story-1 { background-image: url("../images/story-1.webp") }
+figure.story-2 { background-image: url("../images/story-2.webp") }
+figure.story-3 { background-image: url("../images/story-3.webp") }
+figure.story-4 { background-image: url("../images/story-4.webp") }
+figure.story-5 { background-image: url("../images/story-5.webp") }
+figure.story-6 { background-image: url("../images/story-6.webp") }
+figure.story-7 { background-image: url("../images/story-7.webp") }
+figure.story-8 { background-image: url("../images/story-8.webp") }
 
 @media screen and (min-width: 1024px), print {
   section {
@@ -93,7 +168,7 @@ section {
     padding-bottom: 60px;
   }
 
-  .container {
+  .container:not(.animated) {
     width: 800px;
   }
 }
@@ -104,7 +179,7 @@ section {
     padding-bottom: 80px;
   }
 
-  .container {
+  .container:not(.animated) {
     width: 1024px;
   }
 }
