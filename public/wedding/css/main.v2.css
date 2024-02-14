@@ -108,6 +108,7 @@ section {
 
 .our-story {
   width: 200vw;
+  margin-left: -50vw;
 }
 
 .our-story:before {
@@ -126,7 +127,7 @@ section {
   display: block;
   width: 100%;
   height: 100%;
-  background-color: rgba(27,23,14,.88);
+  background-color: rgba(27,23,14,.86);
   position: absolute;
   top: 0;
   left: 0;
@@ -161,6 +162,8 @@ figure.story-5 { background-image: url("../images/story-5.webp") }
 figure.story-6 { background-image: url("../images/story-6.webp") }
 figure.story-7 { background-image: url("../images/story-7.webp") }
 figure.story-8 { background-image: url("../images/story-8.webp") }
+figure.story-9 { background-image: url("../images/story-9.webp") }
+figure.story-0 { background-image: url("../images/story-0.webp") }
 
 @media screen and (min-width: 1024px), print {
   section {
