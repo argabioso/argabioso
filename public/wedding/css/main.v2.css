@@ -27,9 +27,14 @@ html {
   width: 100%;
 }
 
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
 html, body {
   background-color: #202125;
-  color: #e3d8ca;
+  color: #ebe4dc /*#e3d8ca*/;
   margin: 0;
   padding: 0;
 }
@@ -58,13 +63,19 @@ section {
 
 section h2 {
   text-align: center;
-  font-size: 40px;
-  font-weight: 500;
+  font-size: 48px;
   margin-bottom: 48px;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
 }
 
 .mdi {
   color: rgb(216 179 128);
+  background-color: rgb(216 179 128 / 30%);
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 30px;
+  font-size: 40px;
 }
 
 .app {
@@ -123,6 +134,35 @@ section h2 {
   z-index: 2;
   margin-left: -50px;
   margin-top: -39.5px;
+}
+
+.our-story figure {
+  margin: 0;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.our-story figure > img {
+  width: 100%;
+}
+
+.story-details {
+  margin-top: 16px;
+}
+
+.story-details h3 {
+  margin: 0;
+  font-size: 24px;
+  letter-spacing: -1px;
+}
+
+.story-details p {
+  margin: 8px 0 0 0;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  color: rgb(235 228 220 / 60%);
+  font-family: "Google Sans Text", Arial, sans-serif;
+  font-weight: 400;
 }
 
 @media screen and (min-width: 1024px), print {
