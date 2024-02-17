@@ -70,12 +70,20 @@ section h2 {
 }
 
 .mdi {
-  color: rgb(216 179 128);
-  background-color: rgb(228 174 88 / 30%);
   padding-left: 15px;
   padding-right: 15px;
   border-radius: 30px;
   font-size: 40px;
+}
+
+.mdi.mdi-heart {
+  color: rgb(231 44 44);
+  background-color: rgb(228 88 88 / 30%);
+}
+
+.mdi.mdi-ring {
+  color: rgb(216 179 128);
+  background-color: rgb(228 174 88 / 30%);
 }
 
 .app {
@@ -99,8 +107,8 @@ section h2 {
 .full-width-container {
     position: relative;
     width: 100%;
-    /* height: 0; */
-    padding-bottom: 56.25%;
+    padding-bottom: 51.25%;
+    margin-top: -6px;
 }
 
 .video {
@@ -158,6 +166,18 @@ section.proposal {
   margin-top: -39.5px;
 }
 
+.title {
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  z-index: 2;
+}
+
+.title + h2 {
+  margin-top: -12px;
+}
+
 .our-story figure {
   margin: 0;
   border-radius: 24px;
@@ -166,6 +186,7 @@ section.proposal {
 
 .our-story figure > img {
   width: 100%;
+  opacity: 0.75;
 }
 
 .story-details {
@@ -210,28 +231,13 @@ ol.animation__images {
   width: 100%;
 }
 
-@media screen and (min-width: 1024px), print {
-  .container:not(.animated) {
-    width: 800px;
+@media screen and (min-width: 602px), print {
+  .container {
+    width: 600px;
   }
 
   .our-story .background-image {
     background-image: url("../images/bg--our-story.webp");
-  }
-}
-
-@media screen and (min-width: 1366px), print {
-  section {
-    padding-top: 84px;
-    padding-bottom: 84px;
-  }
-
-  section h2 {
-    font-size: 60px;
-  }
-
-  .container:not(.animated) {
-    width: 1024px;
   }
 }
 
