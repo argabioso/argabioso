@@ -58,7 +58,7 @@ section {
   margin: 0 auto;
   padding: 64px 0;
   width: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 section h2 {
@@ -78,12 +78,17 @@ section h2 {
 
 .mdi.mdi-heart {
   color: rgb(231 44 44);
-  background-color: rgb(228 88 88 / 30%);
+  background-color: rgb(228 88 88 / 22%);
 }
 
 .mdi.mdi-ring {
   color: rgb(216 179 128);
-  background-color: rgb(228 174 88 / 30%);
+  background-color: rgb(228 174 88 / 20%);
+}
+
+.mdi.mdi-calendar-clock {
+  color: #1967d2;
+  background-color: rgb(24 103 210 / 20%);
 }
 
 .app {
@@ -152,6 +157,16 @@ section h2 {
 
 section.proposal {
   background-color: #191b1d;
+  padding-bottom: 0;
+}
+
+section.wedding {
+  background-color: #f1f3f4;
+  padding-bottom: 0;
+}
+
+section.wedding h2 {
+  color: #222222;
 }
 
 .hero .logo {
@@ -229,6 +244,20 @@ ol.animation__images {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
+}
+
+.google-map {
+     padding-bottom: 100%;
+     position: relative;
+}
+
+.google-map iframe {
+     height: 100%;
+     width: 100%;
+     left: 0;
+     top: 0;
+     position: absolute;
+     z-index: 4;
 }
 
 @media screen and (min-width: 602px), print {
