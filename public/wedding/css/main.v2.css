@@ -34,9 +34,8 @@ body {
 
 html, body {
   background-color: #202125;
-  color: #ebe4dc /*#e3d8ca*/;
+  color: #ebe4dc;
   margin: 0;
-  padding: 0;
 }
 
 h1, h2, h3 {
@@ -92,8 +91,8 @@ section h2 {
 }
 
 .mdi.mdi-camera {
-  color: #cbcbcb;
-  background-color: rgb(209 209 209 / 20%);
+  color: #f2c400;
+  background-color: rgb(242 196 36 / 20%);
 }
 
 .app {
@@ -119,6 +118,7 @@ section h2 {
     width: 100%;
     padding-bottom: 51.25%;
     margin-top: -6px;
+    z-index: 3;
 }
 
 .video {
@@ -158,6 +158,10 @@ section h2 {
 
 .our-story .background-image {
   background-image: url("../images/bg--our-story.tall.webp");
+}
+
+.photoshoot .background-image {
+  background-image: url("../images/bg--gray-texture.webp");
 }
 
 section.proposal {
