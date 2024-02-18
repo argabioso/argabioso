@@ -91,6 +91,11 @@ section h2 {
   background-color: rgb(24 103 210 / 20%);
 }
 
+.mdi.mdi-camera {
+  color: #cbcbcb;
+  background-color: rgb(209 209 209 / 20%);
+}
+
 .app {
   position: relative;
 }
