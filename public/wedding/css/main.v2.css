@@ -150,6 +150,10 @@ section h2 {
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 0;
+
+  /* Preserve aspect ratio */
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .hero .background-image {
