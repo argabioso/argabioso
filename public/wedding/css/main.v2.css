@@ -81,8 +81,8 @@ section h2 {
 }
 
 .mdi.mdi-ring {
-  color: rgb(216 179 128);
-  background-color: rgb(228 174 88 / 20%);
+  color: rgb(255 255 255);
+  background-color: rgb(228 213 189 / 20%);
 }
 
 .mdi.mdi-calendar-clock {
@@ -91,8 +91,8 @@ section h2 {
 }
 
 .mdi.mdi-camera {
-  color: #f2c400;
-  background-color: rgb(242 196 36 / 20%);
+  color: rgb(216 179 128);
+  background-color: rgb(228 174 88 / 20%);
 }
 
 .app {
@@ -111,6 +111,10 @@ section h2 {
 
 .container > .container {
   height: auto;
+}
+
+.photoshoot .full-width-container {
+    padding: 0 12px 12px 12px;
 }
 
 .full-width-container {
@@ -277,9 +281,33 @@ ol.animation__images {
     width: 600px;
   }
 
+  .full-width-container {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .our-story .background-image {
     background-image: url("../images/bg--our-story.webp");
   }
+
+  .full-width-container,
+  .google-map {
+    padding-bottom: 400px;
+  }
+
+  .google-map iframe {
+    height: 400px;
+    /* width: 600px; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    display: block;
+  }
+
+  .video {
+      height: 400px;
+  }
+
 }
 
 /*
