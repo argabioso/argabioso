@@ -2,154 +2,128 @@
 <html lang="en-us">
 
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GWN2HHMZ4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2GWN2HHMZ4');
+  </script>
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#101010" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="shortcut icon" href="../assets/icons/favicon.ico" />
 
   <title>Mitchie and Arbyn's Wedding</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@500;700&display=swap">
-  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://arbyn.argabioso.com/shared/css/fonts.css">
 
-  <link rel="stylesheet" href="../shared/css/fonts.css" />
-  <link rel="stylesheet" href="css/bulma.css" />
-  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/main.v2.css" />
 </head>
 
 <body>
-  <script src="https://accounts.google.com/gsi/client" async></script>
-  <script>
-    function handleCredentialResponse(response) {
-      console.log("Encoded JWT ID token: " + response.credential);
-    }
-    window.onload = function () {
-      google.accounts.id.initialize({
-        client_id: "148701333560-9pulfmcem72a78jod351ml512d0furpq.apps.googleusercontent.com",
-        callback: handleCredentialResponse
-      });
-      google.accounts.id.renderButton(
-        document.getElementById("rsvp"),
-        { theme: "outline", size: "medium" }  // customization attributes
-      );
-      google.accounts.id.prompt(); // also display the One Tap dialog
-    }
-  </script>
-  <nav class="navbar is-transparent is-fixed-top" role="navigation" aria-label="main navigation">
-    <div class="navbar-background"></div>
-    <div class="container is-max-desktop">
-      <div class="navbar-brand">
-        <a class="navbar-item" href="/wedding">
-          <h1>Mitchie &amp; Arbyn's Wedding</h1>
-        </a>
+  <div data-scroll-container class="app">
+    <section data-scroll-section data-scroll-section-id="hero" class="hero">
+      <img data-scroll data-scroll-speed="6" class="logo" src="images/logo--colored.svg">
+      <div data-scroll data-scroll-speed="1" class="background-image"></div>
+    </section>
 
-        <div class="navbar-item">
-          <div class="buttons">
-            <button class="button is-black is-small is-rounded" id="rsvp" data-target="modal-rsvp-form">RSVP</button>
-          </div>
+    <section data-scroll-section data-scroll-section-id="our-story" class="our-story">
+      <div data-scroll data-scroll-speed="3" class="container">
+        <img class="title" src="images/title-002.webp">
+
+        <h2>story before forever ❤️</span></h2>
+
+        <div class="story-details electronics">
+          <figure>
+            <img src="images/stories/story-001.webp">
+          </figure>
+
+          <h3>Student orgs and school projects</h3>
+          <p>Our journey began in the hallowed halls of college where electronics engineering 🤖 not only sparked circuits but also an unexpected romance between two classmates.</p>
+          <!-- <br /> -->
+          <!-- <p>Late nights perfecting event ads and collaborating on robotics projects evolved into a deeper connection, paving the way from classmates to soulmates.</p> -->
+        </div>
+
+        <div class="story-details lulufam">
+          <figure>
+            <img src="images/stories/story-003.webp">
+          </figure>
+
+          <h3>Extending our love</h3>
+          <p>During the height of the COVID pandemic, we decided to take care of the most cheerful and the most dramatic dogs 🐶 ever: Sylvie and Loki, respectively 😏.</p>
+        </div>
+
+        <div class="story-details proposal" style="margin-bottom: 0;">
+          <figure>
+            <img src="images/stories/story-002.webp">
+          </figure>
+
+          <h3>Cinematic proposal</h3>
+          <p>After tricking my girlfriend into thinking we were just having a regular movie night 🎬, I surprised her with a homemade proposal video featuring our friends and family sharing all the reasons as to why she has to marry me 💍.</p>
         </div>
       </div>
-    </div>
-  </nav>
 
-  <section class="hero is-fullheight engagement-ring">
-    <div class="hero-head"></div>
+      <div data-scroll data-scroll-speed="1" class="background-image"></div>
+    </section>
 
-    <div class="hero-body">
-      <div class="animation engagement-ring">
-        <div class="title-container">
-          <img src="images/title.webp" class="mitchie-arbyn-title">
-          <br />
-          <span class="subtitle">&nbsp;The Wedding</span>
-        </div>
-        <ol class="animation__images">
-          <li><img src="images/ring/39.webp" alt="Ring Photo #39" class="visible" /></li>
-          <li><img src="images/ring/38.webp" alt="Ring Photo #38" class="hidden" /></li>
-          <li><img src="images/ring/37.webp" alt="Ring Photo #37" class="hidden" /></li>
-          <li><img src="images/ring/36.webp" alt="Ring Photo #36" class="hidden" /></li>
-          <li><img src="images/ring/35.webp" alt="Ring Photo #35" class="hidden" /></li>
-          <li><img src="images/ring/34.webp" alt="Ring Photo #34" class="hidden" /></li>
-          <li><img src="images/ring/33.webp" alt="Ring Photo #33" class="hidden" /></li>
-          <li><img src="images/ring/32.webp" alt="Ring Photo #32" class="hidden" /></li>
-          <li><img src="images/ring/31.webp" alt="Ring Photo #31" class="hidden" /></li>
-          <li><img src="images/ring/30.webp" alt="Ring Photo #30" class="hidden" /></li>
-          <li><img src="images/ring/29.webp" alt="Ring Photo #29" class="hidden" /></li>
-          <li><img src="images/ring/28.webp" alt="Ring Photo #28" class="hidden" /></li>
-          <li><img src="images/ring/27.webp" alt="Ring Photo #27" class="hidden" /></li>
-          <li><img src="images/ring/26.webp" alt="Ring Photo #26" class="hidden" /></li>
-          <li><img src="images/ring/25.webp" alt="Ring Photo #25" class="hidden" /></li>
-          <li><img src="images/ring/24.webp" alt="Ring Photo #24" class="hidden" /></li>
-          <li><img src="images/ring/23.webp" alt="Ring Photo #23" class="hidden" /></li>
-          <li><img src="images/ring/22.webp" alt="Ring Photo #22" class="hidden" /></li>
-          <li><img src="images/ring/21.webp" alt="Ring Photo #21" class="hidden" /></li>
-          <li><img src="images/ring/20.webp" alt="Ring Photo #20" class="hidden" /></li>
-          <li><img src="images/ring/19.webp" alt="Ring Photo #19" class="hidden" /></li>
-          <li><img src="images/ring/18.webp" alt="Ring Photo #18" class="hidden" /></li>
-          <li><img src="images/ring/17.webp" alt="Ring Photo #17" class="hidden" /></li>
-          <li><img src="images/ring/16.webp" alt="Ring Photo #16" class="hidden" /></li>
-          <li><img src="images/ring/15.webp" alt="Ring Photo #15" class="hidden" /></li>
-          <li><img src="images/ring/14.webp" alt="Ring Photo #14" class="hidden" /></li>
-          <li><img src="images/ring/13.webp" alt="Ring Photo #13" class="hidden" /></li>
-          <li><img src="images/ring/12.webp" alt="Ring Photo #12" class="hidden" /></li>
-          <li><img src="images/ring/11.webp" alt="Ring Photo #11" class="hidden" /></li>
-          <li><img src="images/ring/10.webp" alt="Ring Photo #10" class="hidden" /></li>
-          <li><img src="images/ring/09.webp" alt="Ring Photo #9" class="hidden" /></li>
-          <li><img src="images/ring/08.webp" alt="Ring Photo #8" class="hidden" /></li>
-          <li><img src="images/ring/07.webp" alt="Ring Photo #7" class="hidden" /></li>
-          <li><img src="images/ring/06.webp" alt="Ring Photo #6" class="hidden" /></li>
-          <li><img src="images/ring/05.webp" alt="Ring Photo #5" class="hidden" /></li>
-          <li><img src="images/ring/04.webp" alt="Ring Photo #4" class="hidden" /></li>
-          <li><img src="images/ring/03.webp" alt="Ring Photo #3" class="hidden" /></li>
-          <li><img src="images/ring/02.webp" alt="Ring Photo #2" class="hidden" /></li>
-          <li><img src="images/ring/01.webp" alt="Ring Photo #1" class="hidden" /></li>
-        </ol>
+    <section data-scroll-section data-scroll-section-id="proposal" class="proposal">
+      <div class="container">
+        <h2>She said yes! Everybody said yes! 💍</span></h2>
       </div>
-    </div>
 
-    <div class="hero-foot"></div>
-  </section>
+      <img class="cinema-environment" src="images/bg--cinema-top.webp" />
 
-  <div id="modal-rsvp-form" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-content">
-      <div class="box">
-        <div class="field">
-          <div class="control">
-            <label for="guest-name" class="label">Find your wedding invitation</label>
-            <input class="input " type="text" placeholder="Name of guest" name="guest-name" id="guest-name">
-          </div>
-        </div>
-
-        <div class="field is-grouped">
-          <div class="control">
-            <button class="button submit-button is-black ">Find</button>
-          </div>
-          <div class="control">
-            <button class="button cancel-button is-light ">Cancel</button>
-          </div>
-        </div>
+      <div class="full-width-container">
+        <iframe class="video" src="https://www.youtube.com/embed/LNkv-M1TMtg?si=0HkQU5pMxFcK57CM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
-    </div>
 
-    <button class="modal-close is-large" aria-label="close"></button>
+      <img class="cinema-environment" src="images/bg--cinema-bottom.webp" />
+    </section>
+
+    <section data-scroll-section="" data-scroll-section-id="photoshoot" class="photoshoot" style="padding-bottom: 12px">
+      <div class="container">
+        <h2 style="
+    /* color: black; */
+    font-weight: 500;
+    /* text-transform: lowercase; */
+">Becoming a <span class="metrophoto-em" style="
+    color: rgb(229, 204, 170);
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 30px;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+">metrophoto</span> bride 📸</h2>
+      </div>
+
+      <div class="full-width-container" style="padding-bottom: 0">
+        <img class="cinema-environment" src="images/photoshoot-002.webp">
+      </div>
+
+      <div data-scroll="" data-scroll-speed="1" class="background-image"></div>
+    </section>
+
+    <section data-scroll-section data-scroll-section-id="wedding" class="wedding">
+      <div class="container">
+        <h2>When and where will we tie the knot 📌</h2>
+      </div>
+
+      <div class="google-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.8524136593237!2d121.01243837558079!3d14.550431085930013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c913c65ac6b1%3A0x1cb5a45f2e690a11!2sSt.%20John%20Bosco%20Parish%20Church%20-%20Makati%20City%20(Archdiocese%20of%20Manila)!5e0!3m2!1sen!2sph!4v1708197858670!5m2!1sen!2sph" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
   </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.6.2"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
-
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script> -->
 
   <script src="../shared/js/extend.js"></script>
 
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/plugins.v2.js"></script>
+  <script src="js/main.v2.js"></script>
 </body>
 
 </html>
