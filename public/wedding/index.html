@@ -20,11 +20,22 @@
 
   <title>Mitchie and Arbyn's Wedding</title>
 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="https://arbyn.argabioso.com/shared/css/fonts.css">
   <link rel="stylesheet" href="https://use.typekit.net/yue6wsi.css">
 
   <link rel="stylesheet" href="css/main.v2.css" />
+
+  <style>
+  .material-symbols-rounded {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 600,
+    'GRAD' 0,
+    'opsz' 20
+  }
+  </style>
 </head>
 
 <body>
@@ -120,8 +131,8 @@
       </div>
 
       <div class="full-width-container where clearfix">
-        <button class="map-btn church-map-btn active" onclick="showChurch()">Church</button>
-        <button class="map-btn reception-map-btn" onclick="showReception()">Reception</button>
+        <button class="map-btn church-map-btn active" onclick="showChurch()"><span><span class="material-symbols-rounded">church</span> <span class="btn-label">Church</span></span></button>
+        <button class="map-btn reception-map-btn" onclick="showReception()"><span><span class="material-symbols-rounded">nightlife</span> <span class="btn-label">Reception</span></button>
       </div>
 
       <div class="google-map church-map visible">
@@ -133,11 +144,13 @@
       </div>
     </section>
 
-    <h1>test</h1>
-    <section data-scroll-section="" data-scroll-section-id="photoshoot" class="photoshoot" style="padding-bottom: 12px">
+    <section data-scroll-section="" data-scroll-section-id="attire" class="attire">
       <div class="container">
-        <h2>test</h2>
+        <h2>Dress your best to impress! 🤵🏻‍♂️👰🏻‍♀️</h2>
+        <figure><img src="images/attire.png"></figure>
       </div>
+
+      <div data-scroll="" data-scroll-speed="1" class="background-image"></div>
     </section>
   </div>
 

@@ -30,6 +30,7 @@ html {
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  padding-bottom: 100px;
 }
 
 html, body {
@@ -187,6 +188,11 @@ section h2 {
   background-image: url("../images/bg--gray-texture-Enhanced.jpg");
 }
 
+.attire .background-image {
+  background-image: url("../images/bg--textile.webp");
+  opacity: 0.3;
+}
+
 .where {
   position: relative;
 }
@@ -196,15 +202,33 @@ section h2 {
   border-radius: 10px;
   outline: 0;
   border: 0;
-  padding: 8px 12px;
+  padding: 8px 12px 9px 12px;
   font-family: "Google Sans Text", sans-serif;
   font-weight: 400;
-  font-size: 15px;
+  font-size: 16px;
   color: #666;
   margin: 0 4px 8px 4px;
-  display: inline;
+  display: inline-block;
   float: left;
   position: relative;
+}
+
+.map-btn > span {
+   display: flex;
+   font-weight: 600;
+   letter-spacing: -0.5px;
+   align-items: center;
+}
+
+.map-btn > span > .btn-label {
+  padding-top: 4px;
+  vertical-align: bottom;
+  line-height: 1.2;
+}
+
+.map-btn .material-symbols-rounded {
+  font-size: 22px;
+  margin-right: 6px;
 }
 
 .where .map-btn:first-child {
@@ -283,7 +307,7 @@ section.wedding h2 {
   color: #856d51;
   line-height: 1.4;
   font-size: 32px;
-  letter-spacing: -1px;
+  text-shadow: 0 0 0 #856d51;
 }
 
 .when .wedding-countdown,
@@ -386,6 +410,22 @@ ol.animation__images {
      top: 0;
      position: absolute;
      z-index: 4;
+}
+
+.attire {
+  background-color: #fff;
+}
+
+section.attire h2 {
+  color: #222;
+}
+
+.attire figure img {
+  width: 100%;
+}
+
+.attire figure {
+  margin: 0;
 }
 
 @media screen and (min-width: 602px), print {
