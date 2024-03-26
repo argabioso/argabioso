@@ -177,3 +177,9 @@ ol.animation__images {
   opacity: 1 !important;
   visibility: visible !important;
 }
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}

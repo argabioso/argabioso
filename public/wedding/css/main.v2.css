@@ -43,6 +43,12 @@ h1, h2, h3 {
   margin: 0;
 }
 
+.the-seasons {
+  font-family: "the-seasons", serif;
+  font-weight: 700;
+  font-size: 52px;
+}
+
 h1 {
   font-weight: 500;
 }
@@ -120,7 +126,7 @@ section h2 {
 .full-width-container {
     position: relative;
     width: 100%;
-    padding-bottom: 51.25%;
+    padding-bottom: 56%;
     margin-top: -6px;
     z-index: 3;
 }
@@ -149,10 +155,19 @@ section h2 {
   left: 0;
   width: 100%;
   height: 110%;
-  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
+
+  -webkit-background-size: 100%;
+  -moz-background-size: 100%;
+  -o-background-size: 100%;
+  background-size: 100%;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
+
   z-index: 0;
 
   /* Preserve aspect ratio */
@@ -169,7 +184,72 @@ section h2 {
 }
 
 .photoshoot .background-image {
-  background-image: url("../images/bg--gray-texture.webp");
+  background-image: url("../images/bg--gray-texture-Enhanced.jpg");
+}
+
+.where {
+  position: relative;
+}
+
+.where .map-btn {
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  outline: 0;
+  border: 0;
+  padding: 8px 12px;
+  font-family: "Google Sans Text", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #666;
+  margin: 0 4px 8px 4px;
+  display: inline;
+  float: left;
+  position: relative;
+}
+
+.where .map-btn:first-child {
+  margin-left: 28px;
+}
+
+.where .map-btn.active {
+  background-color: #fff;
+  margin-bottom: 0;
+  border-bottom: 8px solid #fff;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.where .map-btn.active:before {
+  content: "";
+  display: 0;
+  position: absolute;
+  bottom: -12px;
+  left: -12px;
+  border-color: transparent white white transparent;
+  border-width: 4px;
+  border-style: solid;
+  width: 16px;
+  height: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+.where .map-btn.active:after {
+  content: "";
+  display: 0;
+  position: absolute;
+  bottom: -12px;
+  right: -12px;
+  border-color: transparent transparent white white;
+  border-width: 4px;
+  border-style: solid;
+  width: 16px;
+  height: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+.where {
+  border-bottom: 9px solid #fff;
+  padding-bottom: 0;
 }
 
 section.proposal {
@@ -184,6 +264,38 @@ section.wedding {
 
 section.wedding h2 {
   color: #222222;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  margin-bottom: 48px;
+}
+
+.when {
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.when .wedding-date {
+  font-family: "the-seasons", sans-serif;
+  font-weight: 700;
+  margin: 0;
+  display: block;
+  text-align: center;
+  color: #856d51;
+  line-height: 1.4;
+  font-size: 32px;
+  letter-spacing: -1px;
+}
+
+.when .wedding-countdown,
+.when .wedding-time {
+  margin: 0;
+  line-height: 1.5rem;
+  letter-spacing: 0rem;
+  color: rgb(171 166 159);
+  font-family: "Google Sans Text", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  font-size: 20px;
 }
 
 .hero .logo {
@@ -317,9 +429,16 @@ ol.animation__images {
 .hidden {
   opacity: 0 !important;
   visibility: hidden !important;
+  display: none !important;
 }
 
 .visible {
   opacity: 1 !important;
   visibility: visible !important;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
 }
