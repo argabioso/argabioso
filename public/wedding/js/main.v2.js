@@ -25,31 +25,43 @@ function updateCountdown() {
 
 	// Print out the remaining time
 	let countdownElement = document.querySelector(".wedding-countdown");
+	let interval = 500;
 
 	if (days < 0 || hours < 0 || minutes < 0 || seconds < 0) {
 		countdownElement.innerHTML = "";
+		return;
 	}
 
 	if (days > 1) {
 		countdownElement.innerHTML = days + " days until";
-	} else if (days === 1) {
+		interval = 43200000;
+	} else if (days == 1) {
 		countdownElement.innerHTML = days + " day until";
+		interval = 43200000;
 	} else if (hours > 1) {
 		countdownElement.innerHTML = hours + " hours until";
+		interval = 1800000;
 	} else if (hours == 1) {
 		countdownElement.innerHTML = hours + " hour until";
+		interval = 1800000;
 	} else if (minutes > 1) {
 		countdownElement.innerHTML = minutes + " minutes until";
+		interval = 30000;
 	} else if (minutes == 1) {
 		countdownElement.innerHTML = minutes + " minute until";
+		interval = 30000;
 	} else if (seconds > 1) {
 		countdownElement.innerHTML = seconds + " seconds until";
+		interval = 500;
 	} else if (seconds == 1) {
 		countdownElement.innerHTML = seconds + " second until";
+		interval = 500;
 	}
 
     // call this function again in 1000ms
-    setTimeout(updateCountdown, 1000);
+    console.log(days + " days, " + hours + " hours, " + minutes + " minutes, " + seconds + " seconds");
+    console.log("interval set to " + interval);
+    setTimeout(updateCountdown, interval);
 }
 
 updateCountdown();

@@ -276,6 +276,41 @@ section h2 {
   padding-bottom: 0;
 }
 
+.rsvp-wrapper {
+  border-top: 9px solid #fff;
+  padding: 28px 0;
+}
+
+.rsvp-btn {
+  color: rgb(164 129 72 / 40%);
+  background: url("../images/gold.webp") no-repeat center;
+  display: block;
+  width: calc(100% - 56px);
+  padding: 20px;
+  background-size: cover;
+  no-repeat 6px align-content: center;
+  text-decoration: none;
+  font-family: "Google Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  font-size: 26px;
+  border-radius: 16px;
+  text-align: center;
+  margin: 0 28px;
+  border: 1px solid #ae8540;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(110, 80, 20, 0.4), inset 0 -2px 5px 1px rgb(174 114 29), inset 0 -1px 1px 3px rgb(239 216 122);
+  transition: all 0.25s ease-in-out;
+  text-shadow: 0px 1px 0px rgba(255,255,255,.3), 0px -1px 0px rgba(0,0,0,.7);
+}
+
+.rsvp-btn:focus,
+.rsvp-btn:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23),
+    inset 0 -2px 5px 1px #b17d10, inset 0 -1px 1px 3px rgba(250, 227, 133, 1);
+  border: 1px solid rgba(165, 93, 7, 0.6);
+  /* color: rgba(120, 50, 5, 0.8); */
+}
+
 section.proposal {
   background-color: #191b1d;
   padding-bottom: 0;
@@ -308,6 +343,7 @@ section.wedding h2 {
   line-height: 1.4;
   font-size: 32px;
   text-shadow: 0 0 0 #856d51;
+  margin-bottom: 3px;
 }
 
 .when .wedding-countdown,
