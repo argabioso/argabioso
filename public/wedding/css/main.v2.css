@@ -515,6 +515,10 @@ h2.subtitle {
 }
 
 .story-hashtag {font-weight: 700;display: inline-block;padding: 6px 14px;border-radius: 24px;background: rgba(255, 255, 255, 0.2); text-align: center;}
+.story-hashtag a {
+  color: #ebe4dc;
+  text-decoration: none;
+}
 .story-details.hashtag {
   text-align: center;
 }
@@ -682,7 +686,7 @@ h2.subtitle {
 
 .flip-card .answer,
 .flip-card .question {
-  font-size: 22px;
+  font-size: 18px;
   font-family: "the-seasons", serif;
   font-weight: 700;
   line-height: 1.2;
@@ -691,6 +695,7 @@ h2.subtitle {
 .lulu-fam {
   background: url("../images/answer--lulu-fam.webp");
   background-size: cover;
+  background-position: center;
 }
 
 .flip-card .answer.how-long-known {
@@ -703,6 +708,13 @@ h2.subtitle {
 
 .flip-card .answer.japan {
   font-size: 32px;
+}
+
+@media screen and (min-width: 410px) {
+  .flip-card .answer,
+  .flip-card .question {
+    font-size: 22px;
+  }
 }
 
 /*
