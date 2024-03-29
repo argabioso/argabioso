@@ -373,7 +373,7 @@ section.wedding h2 {
   margin: 0;
   display: block;
   text-align: center;
-  color: #856d51;
+  color: #213974;
   line-height: 1.4;
   font-size: 32px;
   text-shadow: 0 0 0 #856d51;
@@ -514,7 +514,7 @@ h2.subtitle {
   border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-.story-hashtag {font-weight: 700;display: inline-block;padding: 6px 14px;border-radius: 24px;background: rgba(255, 255, 255, 0.2); text-align: center;}
+.story-hashtag {font-weight: 700;display: inline-block;padding: 8px 16px;border-radius: 24px;background: rgb(232 185 85 / 15%);text-align: center;box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(110, 80, 20, 0.4), inset 0 -2px 3px 1px rgb(174 114 29 / 70%), inset 0 0px 1px 2px rgb(239 216 122 / 70%);color: #f0ebe5;}
 .story-hashtag a {
   color: #ebe4dc;
   text-decoration: none;
@@ -622,7 +622,7 @@ h2.subtitle {
   background-color: rgb(154 118 62 / 85%);
   color: white;
   transform: rotateY(180deg);
-  /*  border-radius: 24px;*/
+  /* border-radius: 24px; */
   padding: 24px;
   text-align: center;
 */
@@ -636,6 +636,8 @@ h2.subtitle {
   align-items: center;
   flex-wrap: wrap;
   flex-direction: column;
+  overflow: hidden;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
 }
 
 .row {
@@ -690,12 +692,31 @@ h2.subtitle {
   font-family: "the-seasons", serif;
   font-weight: 700;
   line-height: 1.2;
+  z-index: 3;
+}
+
+.lulu-fam,
+.japan-ramen,
+.chicken-potato,
+.engineering-building {
+  background-size: cover;
+  background-position: center;
 }
 
 .lulu-fam {
-  background: url("../images/answer--lulu-fam.webp");
-  background-size: cover;
-  background-position: center;
+  background-image: url("../images/answer--lulu-fam.webp");
+}
+
+.japan-ramen {
+  background-image: url("../images/answer--japan-ramen.webp");
+}
+
+.chicken-potato {
+  background-image: url("../images/answer--chicken-potato.webp");
+}
+
+.engineering-building {
+  background-image: url("../images/answer--engineering-building.webp");
 }
 
 .flip-card .answer.how-long-known {
@@ -708,6 +729,19 @@ h2.subtitle {
 
 .flip-card .answer.japan {
   font-size: 32px;
+}
+
+.brown-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(154 118 62 / 55%);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.lulu-fam .brown-overlay {
+  background-color: rgb(154 118 62 / 35%);
 }
 
 @media screen and (min-width: 410px) {
