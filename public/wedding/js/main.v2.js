@@ -8,7 +8,7 @@
 // })();
 
 $(window).scroll(function () {
-  if ($('.attire').isOnScreen() || $('.gifts').isOnScreen()) {
+  if ($('.attire').isOnScreen() || $('.gifts').isOnScreen() || $('.facts').isOnScreen()) {
     $('.rsvp-wrapper').addClass("visible");
   }
   else{
