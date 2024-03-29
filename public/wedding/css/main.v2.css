@@ -76,7 +76,8 @@ section h2 {
   letter-spacing: -1.5px;
 }
 
-section.pre-wedding h2 {
+section.pre-wedding h2,
+section.facts h2 {
   margin-bottom: 10px;
 }
 
@@ -130,7 +131,7 @@ section.pre-wedding {
 }
 
 .photoshoot .full-width-container {
-    padding: 0 12px 12px 12px;
+    padding: 0 28px 28px 28px;
 }
 
 .full-width-container {
@@ -186,13 +187,14 @@ section.pre-wedding {
   background-image: url("../images/bg--bosco-sketch.min.webp");
 }
 
+.facts .background-image,
 .our-story .background-image,
 .next-story .background-image {
   background-image: url("../images/bg--our-story.tall.webp");
 }
 
 .photoshoot .background-image {
-  background-image: url("../images/bg--gray-texture-Enhanced.jpg");
+  background-image: url("../images/bg--metrophoto.webp");
 }
 
 .attire .background-image {
@@ -292,18 +294,16 @@ section.pre-wedding {
 }
 
 .rsvp-wrapper {
-  /* border-top: 9px solid #fff; */
   padding: 28px 0;
   position: fixed;
   bottom: -112px;
   width: 100%;
   z-index: 99;
-  background-color: white;
+  background-color: #f4f3f1;
   -webkit-box-shadow: 0 -1px 2px rgba(32,33,36,.15), 0 -1px 8px rgba(32,33,36,.08);
   box-shadow: 0 -1px 2px rgba(32,33,36,.15), 0 -1px 8px rgba(32,33,36,.08);
   border: 0;
   margin: 0;
-
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   -ms-transition: all 0.25s ease-in-out;
@@ -324,7 +324,7 @@ section.pre-wedding {
   font-weight: 700;
   letter-spacing: -0.5px;
   font-size: 26px;
-  border-radius: 16px;
+  border-radius: 12px;
   text-align: center;
   margin: 0 28px;
   border: 1px solid #ae8540;
@@ -348,7 +348,7 @@ section.proposal {
 }
 
 section.wedding {
-  background-color: #f1f3f4;
+  background-color: #f4f3f1;
   padding-bottom: 0;
 }
 
@@ -487,10 +487,12 @@ section.attire h2 {
   color: #222;
 }
 
+.gifts figure img,
 .attire figure img {
   width: 100%;
 }
 
+.gifts figure,
 .attire figure {
   margin: 0;
 }
@@ -518,6 +520,16 @@ h2.subtitle {
   color: #c4bbb0;
 }
 
+.facts h4 {
+  text-align: center;
+  margin-bottom: 63px;
+  /* font-weight: 400; */
+  color: rgb(196 187 176 / 70%);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8em;
+}
+
 .pre-wedding h4 span {
   color: #ffb210;
   text-transform: uppercase;
@@ -537,6 +549,102 @@ h2.subtitle {
 
 .gifts p {
   color: #dad3cb;
+  /* margin-bottom: 36px; */
+}
+
+.photoshoot-set {
+  border-radius: 24px;
+}
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  height: 100%;
+  /* border: 1px solid #f1f1f1; */
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  position: relative;
+  z-index: 66;
+  display: inline-block;
+  width: calc(50% - 12px);
+  margin: 0 6px;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  z-index: 55;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+  padding: 12px;
+/*  border-radius: 24px;*/
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: dodgerblue;
+  color: white;
+  transform: rotateY(180deg);
+/*  border-radius: 24px;*/
+}
+
+.row {
+  height: 200px;
+}
+
+.row > div {
+  float: left;
+}
+
+.row-2 {
+  margin-top: 12px;
+}
+
+.facts > .container {
+  padding-left: 22px;
+  padding-right: 22px;
+}
+
+.row-1 .flip-card:first-child .flip-card-front,
+.row-1 .flip-card:first-child .flip-card-back {
+  border-top-left-radius: 24px;
+}
+
+.row-1 .flip-card:nth-child(2) .flip-card-front,
+.row-1 .flip-card:nth-child(2) .flip-card-back {
+  border-top-right-radius: 24px;
+}
+
+.row-2 .flip-card:first-child .flip-card-front,
+.row-2 .flip-card:first-child .flip-card-back {
+  border-bottom-left-radius: 24px;
+}
+
+.row-2 .flip-card:nth-child(2) .flip-card-front,
+.row-2 .flip-card:nth-child(2) .flip-card-back {
+  border-bottom-right-radius: 24px;
 }
 
 @media screen and (min-width: 602px), print {
@@ -550,6 +658,7 @@ h2.subtitle {
     margin-right: auto;
   }
 
+  .facts .background-image,
   .our-story .background-image,
   .next-story .background-image {
     background-image: url("../images/bg--our-story.webp");
