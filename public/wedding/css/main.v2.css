@@ -113,6 +113,7 @@ section.pre-wedding {
 }
 
 .app {
+  display: block;
   position: relative;
 }
 
@@ -754,10 +755,41 @@ h2.subtitle {
   background-color: rgb(154 118 62 / 35%);
 }
 
+.for-wide {
+  display: none;
+}
+
 @media screen and (min-width: 410px) {
   .flip-card .answer,
   .flip-card .question {
     font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 520px) {
+  body {
+    background-color: black;
+  }
+
+  .app {
+    width: 450px;
+    margin: 0 auto;
+  }
+
+  .rsvp-wrapper {
+    width: 480px;
+    left: 50%;
+    margin-left: -240px;
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+  }
+
+  .for-wide {
+    display: block;
+  }
+
+  .for-narrow {
+    display: none;
   }
 }
 
