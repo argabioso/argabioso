@@ -211,9 +211,13 @@ section.pre-wedding {
   background-image: url("../images/bg--metrophoto.webp");
 }
 
-.attire .background-image {
+.attire:not(.attire-younger) .background-image {
   background-image: url("../images/bg--textile.webp");
   opacity: 0.3;
+}
+
+.attire.attire-younger .background-image {
+  background-image: url("../images/bg--attire-younger.webp");
 }
 
 .pre-wedding .background-image {
@@ -222,6 +226,10 @@ section.pre-wedding {
 
 .gifts .background-image {
   background-image: url("../images/bg--gifts-browny.webp");
+}
+
+.attire-younger {
+  /* min-height: 90vh; */
 }
 
 .where {
@@ -497,7 +505,7 @@ ol.animation__images {
   background-color: #fff;
 }
 
-section.attire h2 {
+section.attire:not(.attire-younger) h2 {
   color: #222;
 }
 
@@ -521,6 +529,9 @@ section.our-story .container:nth-child(2) {
 
 h2.subtitle {
   font-size: 36px;
+}
+
+section:not(.attire) h2.subtitle {
   padding-top: 48px;
   border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
@@ -540,14 +551,22 @@ h2.subtitle {
   color: #c4bbb0;
 }
 
+.attire h4,
 .facts h4 {
   text-align: center;
-  margin-bottom: 48px;
+  /* margin-bottom: 48px; */
   /* font-weight: 400; */
-  color: rgb(196 187 176 / 70%);
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 0.85em;
+}
+
+.facts h4 {
+  color: rgb(196 187 176 / 70%);
+}
+
+.attire h4 {
+  color: rgb(247 242 236 / 85%);
 }
 
 .pre-wedding h4 span {
@@ -758,6 +777,26 @@ h2.subtitle {
 
 .for-wide {
   display: none;
+}
+
+section.attire-younger h2 {
+  color: #f6f3ef;
+}
+
+.circles{
+  opacity: 1;
+  z-index: 6;
+  position: relative;
+  width: 36vw;
+  margin: 0 auto;
+}
+
+.circle {
+  width: 36vw;
+  height: 12vw;
+  border-radius: 6.1vw;
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 /* Phone ni Tito Darne */
