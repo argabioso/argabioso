@@ -47,7 +47,7 @@ h1, h2, h3 {
 .the-seasons {
   font-family: "the-seasons", serif;
   font-weight: 700;
-  font-size: 52px;
+  font-size: 50px;
 }
 
 h1 {
@@ -736,6 +736,7 @@ h2.subtitle {
 
 .answer .years {
   font-size: 42px;
+  line-height: 1;
 }
 
 .flip-card .answer.japan {
@@ -757,6 +758,94 @@ h2.subtitle {
 
 .for-wide {
   display: none;
+}
+
+/* Phone ni Tito Darne */
+@media screen and (max-width: 280px) {
+  html {
+    font-size: 13px;
+  }
+
+  body {
+    padding-bottom: 80px;
+  }
+
+  section h2 {
+    font-size: 36px;
+  }
+
+  .container {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+
+  .story-details h3 {
+    font-size: 17px;
+  }
+
+  h2.subtitle {
+    font-size: 27px;
+  }
+
+  .the-seasons {
+    font-size: 38px;
+  }
+
+  .when .wedding-countdown,
+  .when .wedding-time {
+    font-size: 16px;
+  }
+
+  .when .wedding-date {
+    font-size: 24px;
+  }
+
+  .where .map-btn {
+    font-size: 13px;
+  }
+
+  .flip-card .material-symbols-rounded {
+    font-size: 18px;
+  }
+
+  .flip-card .answer,
+  .flip-card .question {
+    font-size: 14px;
+    word-break: break-word;
+  }
+
+  .rsvp-btn {
+    font-size: 20px;
+    margin-left: 22px;
+    margin-right: 22px;
+    width: calc(100% - 44px);
+  }
+
+  .photoshoot .full-width-container {
+      padding: 0 22px 22px 22px;
+  }
+
+  .where .map-btn:first-child {
+    margin-left: 22px;
+  }
+
+  .rsvp-wrapper {
+    padding-top: 22px;
+    padding-bottom: 22px;
+  }
+
+  .answer .years {
+    font-size: 32px;
+  }
+
+  .flip-card .answer.japan,
+  .flip-card .answer.how-long-known {
+    font-size: 22px;
+  }
+
+  .flip-card-back {
+    padding: 20px;
+  }
 }
 
 @media screen and (min-width: 410px) {
