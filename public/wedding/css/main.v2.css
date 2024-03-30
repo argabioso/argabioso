@@ -562,7 +562,7 @@ section:not(.attire) h2.subtitle {
 }
 
 .facts h4 {
-  color: rgb(196 187 176 / 70%);
+  color: rgb(196 187 176 / 80%);
 }
 
 .attire h4 {
@@ -799,7 +799,7 @@ section.attire-younger h2 {
 }
 
 /* Phone ni Tito Darne */
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 359px) {
   html {
     font-size: 13px;
   }
