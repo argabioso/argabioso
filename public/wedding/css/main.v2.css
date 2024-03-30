@@ -799,7 +799,7 @@ section.attire-younger h2 {
 }
 
 /* Phone ni Tito Darne */
-@media screen and (max-width: 280px) {
+@media screen and (max-width: 360px) {
   html {
     font-size: 13px;
   }
