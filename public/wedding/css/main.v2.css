@@ -784,7 +784,6 @@ section.attire-younger h2 {
 }
 
 .circles{
-  opacity: 1;
   z-index: 6;
   position: relative;
   width: 36vw;
@@ -895,6 +894,16 @@ section.attire-younger h2 {
 }
 
 @media screen and (min-width: 520px) {
+  .circles{
+    width: 260px;
+  }
+
+  .circle {
+    width: 260px;
+    height: 60px;
+    border-radius: 30px;
+  }
+
   body {
     background-color: black;
   }
