@@ -628,6 +628,10 @@ section:not(.attire) h2.subtitle {
   transform-style: preserve-3d;
 }
 
+.flip-card:hover {
+  cursor: help;
+}
+
 /* Do an horizontal flip when you move the mouse over the flip box container */
 .flip-card:hover .flip-card-inner {
   transform: rotateY(180deg);
