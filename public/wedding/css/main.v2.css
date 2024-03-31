@@ -262,6 +262,10 @@ section.pre-wedding {
   position: relative;
 }
 
+.where .map-btn:not(.active):hover {
+  cursor: pointer;
+}
+
 .map-btn > span {
    display: flex;
    font-weight: 600;
