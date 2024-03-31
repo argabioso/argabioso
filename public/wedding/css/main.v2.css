@@ -135,6 +135,14 @@ section.pre-wedding {
   height: 200px;
 }
 
+.flickity-button {
+  background-color: rgb(255, 255, 255, 0.25);
+}
+
+.flickity-prev-next-button .flickity-button-icon {
+  fill: #ffffff;
+}
+
 .container > .container {
   height: auto;
 }
