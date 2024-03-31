@@ -127,6 +127,14 @@ section.pre-wedding {
   z-index: 1;
 }
 
+.carousel {
+  background-color: #030306;
+}
+
+.carousel img {
+  height: 200px;
+}
+
 .container > .container {
   height: auto;
 }
@@ -156,6 +164,7 @@ section.pre-wedding {
   margin: 0;
   padding: 0;
   outline: 0;
+  display: block;
 }
 
 .hero {
