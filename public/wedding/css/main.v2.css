@@ -92,26 +92,6 @@ section.pre-wedding {
   font-size: 40px;
 }
 
-.mdi.mdi-heart {
-  color: rgb(231 44 44);
-  background-color: rgb(228 88 88 / 22%);
-}
-
-.mdi.mdi-ring {
-  color: rgb(255 255 255);
-  background-color: rgb(228 213 189 / 20%);
-}
-
-.mdi.mdi-calendar-clock {
-  color: #1967d2;
-  background-color: rgb(24 103 210 / 20%);
-}
-
-.mdi.mdi-camera {
-  color: rgb(216 179 128);
-  background-color: rgb(228 174 88 / 20%);
-}
-
 .app {
   display: block;
   position: relative;
