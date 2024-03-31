@@ -127,8 +127,9 @@ section.pre-wedding {
   z-index: 1;
 }
 
-.carousel {
+.cinema-environment.carousel {
   background-color: #030306;
+  margin-bottom: 48px;
 }
 
 .carousel img {
@@ -141,6 +142,14 @@ section.pre-wedding {
 
 .flickity-prev-next-button .flickity-button-icon {
   fill: #ffffff;
+}
+
+.flickity-prev-next-button.previous {
+  left: 24px;
+}
+
+.flickity-prev-next-button.next {
+  right: 24px;
 }
 
 .flickity-button:hover {
@@ -905,6 +914,15 @@ section.attire-younger h2 {
   .flip-card-back {
     padding: 20px;
   }
+
+  .flickity-prev-next-button.previous {
+    left: 12px;
+  }
+
+  .flickity-prev-next-button.next {
+    right: 12px;
+  }
+
 }
 
 @media screen and (min-width: 410px) {
