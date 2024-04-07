@@ -8,11 +8,11 @@
 // })();
 
 $(window).scroll(function () {
-  if ($('.attire').isOnScreen() || $('.gifts').isOnScreen() || $('.facts').isOnScreen()) {
-    $('.rsvp-wrapper').addClass("visible");
+  if ($('section.hero').isOnScreen()) {
+    $('.rsvp-wrapper').removeClass("visible");
   }
   else{
-    $('.rsvp-wrapper').removeClass("visible");
+    $('.rsvp-wrapper').addClass("visible");
   }
 });
 
